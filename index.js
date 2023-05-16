@@ -33,3 +33,15 @@ for (let prop in lizard) {
     console.log('prototype chain property: ', prop)  
   }
 }
+
+// How can we create our own prototypes?
+// You can find the way below.
+
+let human = {
+  mortal: true
+}
+
+let socrates = Object.create(human)
+socrates.age = 45
+console.log(socrates.mortal)
+console.log(human.isPrototypeOf(socrates))
